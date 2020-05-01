@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "OrionTelemetryManager/1.0.0": {
+        "runtime": {
+          "OrionTelemetryManager.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "OrionTelemetryManager/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
