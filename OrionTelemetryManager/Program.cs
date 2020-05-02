@@ -94,7 +94,7 @@ namespace OrionTelemetryManager
                 Environment.Exit(0);
             }
 
-            Console.WriteLine("Orion closed");
+            //Console.WriteLine("Orion closed");
         }
     }
 }
