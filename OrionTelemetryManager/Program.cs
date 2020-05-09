@@ -15,7 +15,7 @@ namespace OrionTelemetryManager
 
         static void Main(string[] args)
         {
-            //https://miromannino.com/blog/hide-console-window-in-c/
+            ////https://miromannino.com/blog/hide-console-window-in-c/
             IntPtr h = Process.GetCurrentProcess().MainWindowHandle;
             ShowWindow(h, 0);
 
@@ -67,6 +67,7 @@ namespace OrionTelemetryManager
                 if (previousData.Length == 0)
                 {
                     newData = tempData;
+                    Console.WriteLine("Previous data not found, no need to append");
                 }
                 else
                 {
@@ -86,7 +87,11 @@ namespace OrionTelemetryManager
                 }
 
                 File.WriteAllText(OrionDataPath, newData);
+                Console.WriteLine("Orion data combined");
+
                 File.Delete(OrionDataTempPath);
+                Console.WriteLine("Orion temp file deleted");
+
             }
             else
             {
@@ -94,7 +99,9 @@ namespace OrionTelemetryManager
                 Environment.Exit(0);
             }
 
-            //Console.WriteLine("Orion closed");
+            Console.WriteLine("Orion closed");
+            //testing
+            //var test = Console.Read();
         }
     }
 }
